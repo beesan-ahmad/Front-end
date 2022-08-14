@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)file:///E:/Front-end/beesan.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            height: 100vh;
+            background-color: darksalmon;
+            display: flex;
+            flex-direction: column;
+        }
+        .head{
+            display: flex;
+            flex-direction: row;
+            background-color: dimgray;
+            min-height: 60x;
+            display: inline;
+        }
+        .main{
+            height: 100vh;
+            display: flex;
+            background-color: white;
+            overflow: auto;
+            margin: 15px;
+         
+            
+        }
+        .left{
+          
+            align-items: center;
+            background-color: yellow;
+            width: 170px;
+        }
+        .footer{
+            display: flex;
+            flex-direction: row;
+            background-color:blue;
+            height: 7vh;
+            align-content: center;
+        }
+        .right{
+            flex:1;
+            display: flex;
+            flex-direction: column;
+
+        }
+        .right1{
+            
+            background-color: red;
+        
+            height: 40vh;
+            text-align: center;
+            border: 3px solid white;
+            margin: bottom 2px;
+           
+        }
+        .right2{
+                 
+                background-color:green;
+                
+                height: 40vh;
+                text-align: center;
+                border: 3px solid white;
+            }
+            .head   button{
+             border: 1px solid black;
+             margin-bottom: 10px;  display: flex;
+             flex-direction: row;
+             height: 20px;
+             display: inline;
+             background-color: cornflowerblue;
+
+            }
+    </style>
+
+
+ 
+</head>
+<body>
+   
+<div class="head">
+<h1>Header section height is dynamic with minimum height 60px.depend on its content</h1>
+
+<button onclick="Add()">Add content</button>
+
+
+<button onclick="Remove()">Remove</button>
+<ul id="List"></ul>
+</div>
+   
+    <div class="main">
+        
+        <div class="left">
+            left section
+    
+        </div>
+        <div class="right">
+         
+    
+        
+        <div class="right1">
+            part1
+    
+        </div>
+        <div class="right2">
+            part2
+    
+        </div>
+    </div>
+</div>
+    <div class="footer">
+        footer section 
+    </div>
+    <script>
+  
+        function Add(){
+          
+            var list= document.getElementById("List");
+            list.innerHTML+="<li> new line</li>"
+           
+    
+        }
+        function Remove(){
+            var list= document.getElementById("List");
+            list.innerHTML="";
+           
+    
+        }
+        </script>
+
+</body></html>
